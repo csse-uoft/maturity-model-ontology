@@ -37,6 +37,4 @@ jobs:
           release: Latest
           token: ${{ secrets.GITHUB_TOKEN }}
           body: Generated on ${{ steps.date.outputs.date }}
-          files:
-            - ./cudr-maturity-model.owl
-            - ./fair.owl
+          files: ./cudr-maturity-model.owl ./fair.owl
