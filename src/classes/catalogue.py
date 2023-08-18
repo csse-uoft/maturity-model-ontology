@@ -4,7 +4,6 @@ from datetime import date, datetime
 
 
 class Catalogue(Thing):
-    label = "CUDR Catalogue Entry"
     is_a = [
         # ------
         # Level 1
@@ -50,7 +49,6 @@ class Catalogue(Thing):
         dcat.spatialResolutionInMeters.only(xsd.decimal),
         cudr.spatialResolutionInRegion.only(sc.AdministrativeArea),  # No such property in dcat, using cudr
 
-
         # ------
         # Level 4
         # ------
@@ -89,3 +87,6 @@ class Catalogue(Thing):
         dqv.inDimension.only(dqv.Dimension),
 
     ]
+
+
+rdfs.label[Catalogue] = ["CUDR Catalogue Entry"]
