@@ -28,6 +28,8 @@ odrl = odrl_onto.get_namespace("http://www.w3.org/ns/odrl/2/")
 vcard_onto = default_world.get_ontology("https://www.w3.org/2006/vcard/ns.rdf").load()
 vcard = vcard_onto.get_namespace("http://www.w3.org/2006/vcard/ns#")
 
+rdfs_onto = default_world.get_ontology("https://csse-uoft.github.io/ontologies/rdfs.owl").load()
+rdfs = rdfs_onto.get_namespace("http://www.w3.org/2000/01/rdf-schema#")
 
 # Use `get_ontology` for the ontologies we want to create/modify, otherwise use `get_namespace`
 vann = default_world.get_namespace("http://purl.org/vocab/vann/")
@@ -38,6 +40,5 @@ prov = default_world.get_namespace("http://www.w3.org/ns/prov#")
 oa = default_world.get_namespace("http://www.w3.org/ns/oa#")
 
 xsd = default_world.get_ontology("http://www.w3.org/2001/XMLSchema#")
-rdfs = default_world.get_ontology("http://www.w3.org/2000/01/rdf-schema#")
 cudr = default_world.get_ontology("http://data.urbandatacentre.ca/")
 fair = default_world.get_ontology("http://ontology.eil.utoronto.ca/fair#")
