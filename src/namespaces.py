@@ -36,7 +36,6 @@ cc = default_world.get_namespace("http://creativecommons.org/ns#")
 owl = default_world.get_namespace("http://www.w3.org/2002/07/owl#")
 prov = default_world.get_namespace("http://www.w3.org/ns/prov#")
 oa = default_world.get_namespace("http://www.w3.org/ns/oa#")
-vcard = default_world.get_namespace("http://www.w3.org/2006/vcard/ns#")
 
 xsd = default_world.get_ontology("http://www.w3.org/2001/XMLSchema#")
 rdfs = default_world.get_ontology("http://www.w3.org/2000/01/rdf-schema#")
