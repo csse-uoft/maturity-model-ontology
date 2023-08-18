@@ -35,6 +35,7 @@ jobs:
         uses: johnwbyrd/update-release@v1.0.0
         with:
           release: Latest
+          tag: latest
           token: ${{ secrets.GITHUB_TOKEN }}
           body: Generated on ${{ steps.date.outputs.date }}
           files: ./cudr-maturity-model.owl ./fair.owl
