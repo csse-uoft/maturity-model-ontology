@@ -1,4 +1,4 @@
-from owlready2 import default_world
+# from owlready2 import default_world
 from src.namespaces import fair, cudr
 from src.metadata import set_cudr_metadata, set_fair_metadata
 from src.addon import add_missing_entities

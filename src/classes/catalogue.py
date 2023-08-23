@@ -1,5 +1,5 @@
 from owlready2 import default_world, Thing
-from src.namespaces import vann, dct, dcat, skos, cudr, rdfs, vcard, foaf, fair, owl, adms, xsd, sc, odrl, dqv
+from src.namespaces import vann, dct, dcat, skos, cudr, rdfs, vcard, foaf, fair, owl, adms, xsd, sc, odrl, dqv, void
 from datetime import date, datetime
 
 
@@ -36,8 +36,8 @@ class Catalogue(Thing):
         # ------
         dcat.landingPage.only(rdfs.Resource),
         dct.language.only(dct.LinguisticSystem),
-        fair["rda-f1-01d"].only(bool),
-        fair["rda-f1-02d"].only(bool),
+        fair["hasRDA_F1_01D"].only(bool),
+        fair["hasRDA_F1_02D"].only(bool),
         dct.format.only(dct.MediaTypeOrExtent),
         dcat.downloadURL.only(rdfs.Resource),
         owl.versionInfo.only(rdfs.Literal),
@@ -62,17 +62,17 @@ class Catalogue(Thing):
         # ------
         # Level 5
         # ------
-        fair["rda-r1.3-01d"].only(bool),
-        fair["rda-i1-01d"].only(bool),
-        fair["rda-i1-02d"].only(bool),
-        fair["rda-i2-01d"].only(bool),
-        fair["rda-i3-01d"].only(bool),
-        fair["rda-a1.2-01d"].only(bool),
-        fair["rda-a1-02d"].only(bool),
-        fair["rda-a1-03d"].only(bool),
-        fair["rda-a1-04d"].only(bool),
-        fair["rda-a1-05d"].only(bool),
-        fair["rda-a1.1-01d"].only(bool),
+        fair["hasRDA_R1_3_01D"].only(bool),
+        fair["hasRDA_I1_01D"].only(bool),
+        fair["hasRDA_I1_02D"].only(bool),
+        fair["hasRDA_I2_01D"].only(bool),
+        fair["hasRDA_I3_01D"].only(bool),
+        fair["hasRDA_A1_2_01D"].only(bool),
+        fair["hasRDA_A1_02D"].only(bool),
+        fair["hasRDA_A1_03D"].only(bool),
+        fair["hasRDA_A1_04D"].only(bool),
+        fair["hasRDA_A1_05D"].only(bool),
+        fair["hasRDA_A1_1_01D"].only(bool),
 
         # ------
         # Level 6
@@ -80,9 +80,9 @@ class Catalogue(Thing):
         cudr.rows.only(xsd.positiveInteger),
         cudr.columns.only(xsd.positiveInteger),
         cudr.cells.only(xsd.positiveInteger),
-        cudr.triples.only(xsd.positiveInteger),
-        cudr.entities.only(xsd.positiveInteger),
-        cudr["properties"].only(xsd.positiveInteger),
+        void.triples.only(xsd.positiveInteger),
+        void.entities.only(xsd.positiveInteger),
+        void["properties"].only(xsd.positiveInteger),   # "properties" is a keyword in OwlReady2 so requires the dict syntax used here
         dqv.hasQualityAnnotation.only(xsd.positiveInteger),
         dqv.inDimension.only(dqv.Dimension),
 

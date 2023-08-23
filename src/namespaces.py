@@ -31,6 +31,9 @@ vcard = vcard_onto.get_namespace("http://www.w3.org/2006/vcard/ns#")
 rdfs_onto = default_world.get_ontology("https://csse-uoft.github.io/ontologies/rdfs.owl").load()
 rdfs = rdfs_onto.get_namespace("http://www.w3.org/2000/01/rdf-schema#")
 
+void_onto = default_world.get_ontology("https://raw.githubusercontent.com/csse-uoft/ontologies/main/void.rdf").load()
+void = void_onto.get_namespace("http://rdfs.org/ns/void")
+
 # Use `get_ontology` for the ontologies we want to create/modify, otherwise use `get_namespace`
 vann = default_world.get_namespace("http://purl.org/vocab/vann/")
 dc = default_world.get_namespace("http://purl.org/dc/elements/1.1/")

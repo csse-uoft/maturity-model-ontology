@@ -1,0 +1,5 @@
+cudr-maturity-model.owl
+fair.owl
+src/__pycache__/
+src/classes/__pycache__/
+src/properties/__pycache__/

@@ -55,14 +55,3 @@ class columns(DataProperty):
 class cells(DataProperty):
     range = [xsd.positiveInteger]
 
-
-class triples(DataProperty):
-    range = [xsd.positiveInteger]
-
-
-class entities(DataProperty):
-    range = [xsd.positiveInteger]
-
-
-class properties(DataProperty):
-    range = [xsd.positiveInteger]
